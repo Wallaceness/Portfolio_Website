@@ -7,6 +7,7 @@
 </section>
 <img src="Snapshot_20160421.JPG" id="me">
 </div>
+<hr>
 <div id="middle">
 <section id="work" class="section">
 <h1 ng-click="toggle('work')" ng-class="{selected: show_work}" class="tab">Work Experience</h1>
@@ -18,6 +19,7 @@
 <h1 ng-click="toggle('skills')" ng-class="{selected: show_skills}" class="tab">Skills</h1>
 </section>
 </div>
+<div id="bottom">
 <table id="work-table" class="table" ng-show="show_work==true">
 <tr class="head"><td>Company</td><td>Dates</td><td>Position</td></tr>
 <tr class="job" ng-repeat="job in work">
@@ -42,4 +44,5 @@
 <td ng-repeat="skill in row">{{skill}}</td>
 </tr>
 </table>
+</div>
 </div>
