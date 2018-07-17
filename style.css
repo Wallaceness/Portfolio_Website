@@ -1,50 +1,15 @@
 body{
-	background-image: url("Pictures/background.jpg");
+	background-image: url("Pictures/background-3.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
-
-#homepage{
-	display: none;
-	text-align: center;
+nav.navbar{
+	border-bottom: 1px solid black;
 }
-#welcome{
-	font-size: 25vh;
-	color: green;
-	margin-bottom: 0px;
-	font-family: "Courier New", "Lucida Console", monospace;
-}
-#credit{
-	position: fixed;
-	top: 0%;
-	right: 0%;
-}
-#me-waving{
-	height: 50vh;
-	width: 75vh;
-	box-shadow: 10px 10px 5px hsl(0, 0%, 33%);
-	margin-top: 0px;
-}
-#continue{
-	font-size: 10vh;
-	color: green;
-	font-family: "Courier New", "Lucida Console", monospace;
-}
-#continue:hover{
-	color: orange;
-	font-size: 12vh;
-}
-#reach{
-	margin-bottom: 0px;
-	font-family: "Arial", Helvetica, sans-serif;
-}
-
-
 
 #projects-page{
-	margin-left: 8vw;
-	margin-right: 8vw;
+/*	margin-left: 6vw;
+	margin-right: 6vw;*/
 }
 #projects-title{
 	text-align: center;
@@ -56,17 +21,20 @@ body{
 	display: inline-block;
 	text-align: center;
 	margin-top: 0px;
+	width: 47%;
 }
 .title{
 	font-size: 4vh;
 	text-decoration: none;
 }
 .iframe{
-	height: 35vh;
-	width: 35vw;
+	height: calc(45vh - 28px);
+	width: 100%;
 }
 .description{
-	width: 33vw;
+	position: absolute;
+	z-index: 100;
+	width: 45%;
 	text-align: justify;
 	border: 1px solid grey;
 	padding: 1vw;
@@ -79,32 +47,36 @@ body{
 	margin-bottom: 0px;
 	display: inline-block;
 	padding: 0px;
-	border-radius: 50%;
+	border-radius: 15px;
 }
+
+
 #top-left{
-	margin-right: 8vw;
-	margin-bottom: 8vh;
+	margin-right: 6%;
+	margin-bottom: 2vh;
 }
 #top-right{
-	margin-bottom: 8vh;
+	margin-bottom: 2vh;
 }
 #bottom-left{
-	margin-right: 8vw;
+	margin-right: 6%;
 }
 
 
-@media (max-width: 700px){
+@media (max-width: 715px){
 	.iframe{
-		height: 75vh;
-		width: 75vh;
+		/*height: 75%;*/
+		width: 100%;
 		margin-top: 1vh;
 	}
 	.project{
 		display: block;
+		width: 75%;
+		margin: auto;
 	}
 	.description{
-		width: 73vh;
-		margin: auto;
+		width: 75%;
+		/*margin: auto;*/
 	}
 	#top-left{
 		margin: auto;
@@ -122,18 +94,16 @@ body{
 
 
 
-#about_me{
-	text-align: center;
-}
 #about_me-title{
 	font-size: 5vh;
 }
-#profile{
-	text-align: right;
-	display: inline-block;
-	height: 50vh;
+.profile{
+/*	height: calc(50vh - 56px);*/
 }
-.point h3{
+.no-margin{
+	margin: 0;
+}
+.point-ab h3{
 	font-size: 3vh;
 	margin-bottom: 3vh;
 	margin-top: 0px;
@@ -141,36 +111,37 @@ body{
 #top{
 	margin: auto;
 }
-.table{
-	height: 30vh;
-	width: 75%;
-	margin: auto;
-	text-align: center;
+.my-table{
+	height: calc(100vh - 500px);
+	overflow-y: scroll;
 }
-.tab{
+.my-tab{
 	margin-bottom: 0px;
 	margin-top: 0px;
 }
-.section{
+.section-ab{
 	display: inline-block;
 	width: 24vw;
 }
 #me{
+	width: 100%;
+	vertical-align: middle;
+}
+.centered{
 	height: 50vh;
-	width: 65vh;
 }
 .selected{
 	border: 2px solid black;
 	background-color: white;
 }
-#middle{
-	margin: auto;
+
+.my-table td{
+	max-width: 15vh;
+	border: 2px solid black;
+	background-color: white;
 }
-.head{
-	font-weight: bold;
-	font-size: 3vh;
-}
-td{
+
+.my-table th{
 	max-width: 15vh;
 	border: 2px solid black;
 	background-color: white;
@@ -178,8 +149,8 @@ td{
 
 
 @media (max-width: 700px){
-	#profile{
-		text-align: center;
+	.profile{
+		text-align: center!important;
 		width: 65vh;
 	}
 }
@@ -198,32 +169,37 @@ td{
 	color: red;
 	background-color: black;
 }
-.page-link{
+.page-link-1{
 	border: 2px solid grey;
-	height: 15vh;
+	height: 25%;
 	background-color: black;
 	font-size: 3vh;
 }
-.page-link h1{
+.page-link-1 h1{
 	margin-top: 2vh;
 	margin-bottom: 1.5vh;
 }
 #link-link{
-	color: turquoise;
 	font-size: 3vh;
 }
 
 
-#navbar{
+/*#navbar{
 	position: fixed;
 	top: 0px;
 	background-color: white;
 	margin-bottom: 0px;
-}
+}*/
 .link{
 	background-color: white;
 	margin-left: 10vw;
 }
 #first{
 	margin-left: 0px;
+}
+
+@media (max-width: 1000px){
+	#stuff{
+		width: 100vw;
+	}
 }
