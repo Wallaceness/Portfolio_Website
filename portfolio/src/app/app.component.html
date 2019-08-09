@@ -1,15 +1,16 @@
+<app-navbar></app-navbar>
 <div class="container">
     <h1 id="about_me-title" class="text-center">About Me</h1>
     <div id="top" class="row">
         <section class="col-md-6 text-left profile">
-            <div class="point-ab" ng-repeat="(key, value) in profile">
+            <div class="point-ab" ng-for="(key, value) of profile">
                 <h3>{{key}}: {{value}}</h3></div>
         </section>
         <table class="col-md-6 centered">
             <tbody>
                 <tr>
             <td>
-            <img src="Pictures/Snapshot_20160421.JPG" id="me">
+            <img src="../../Pictures/Snapshot_20160421.JPG" id="me">
             </td>
             </tr>
             </tbody>
