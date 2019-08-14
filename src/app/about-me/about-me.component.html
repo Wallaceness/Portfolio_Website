@@ -3,8 +3,8 @@
     <h1 id="about_me-title" class="text-center">About Me</h1>
     <div id="top" class="row">
         <section class="col-md-6 text-left profile">
-            <div class="point-ab" *ngFor="let item of profile | keyvalue">
-                <h3>{{item.key}}: {{item.value}}</h3></div>
+            <div class="point-ab" *ngFor="let item of profile">
+                <h3><span *ngFor="let key of item | keyvalue">{{key.key}}: {{key.value}}</span></h3></div>
         </section>
         <table class="col-md-6 centered">
             <tbody>
