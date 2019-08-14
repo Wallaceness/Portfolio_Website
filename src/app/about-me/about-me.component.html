@@ -1,16 +1,16 @@
-<navbar></navbar>
+<app-navbar></app-navbar>
 <div class="container">
     <h1 id="about_me-title" class="text-center">About Me</h1>
     <div id="top" class="row">
         <section class="col-md-6 text-left profile">
-            <div class="point-ab" ng-repeat="(key, value) in profile">
-                <h3>{{key}}: {{value}}</h3></div>
+            <div class="point-ab" *ngFor="let item of profile | keyvalue">
+                <h3>{{item.key}}: {{item.value}}</h3></div>
         </section>
         <table class="col-md-6 centered">
             <tbody>
                 <tr>
             <td>
-            <img src="Pictures/Snapshot_20160421.JPG" id="me">
+            <img src="assets/Snapshot_20160421.JPG" id="me">
             </td>
             </tr>
             </tbody>
@@ -20,19 +20,19 @@
     <div class="row">
     <ul id="middle" class="nav nav-tabs col-md-12 justify-content-center">
         <li id="work" class="nav-item">
-            <a ng-click="toggle('work')" ng-class="{selected: active}" href="#" class="nav-link">Work Experience</a>
+            <a (click)="toggle('work')" [ngClass]="{selected: active}" href="#" class="nav-link">Work Experience</a>
         </li>
         <li id="education" class="nav-item">
-            <a ng-click="toggle('education')" ng-class="{selected: active}" href="#" class="nav-link">Education</a>
+            <a (click)="toggle('education')" [ngClass]="{selected: active}" href="#" class="nav-link">Education</a>
         </li>
         <li id="skills" class="nav-item">
-            <a ng-click="toggle('skills')" ng-class="{selected: active}" href="#" class="nav-link">Skills</a>
+            <a (click)="toggle('skills')" [ngClass]="{selected: active}" href="#" class="nav-link">Skills</a>
         </li>
     </ul>
 </div>
 <div class="row my-table">
     <div id="bottom" class="col-md-12">
-        <table id="work-table" class="table table-bordered" ng-show="show_work==true">
+        <table id="work-table" class="table table-bordered" *ngIf="show_work===true">
             <thead>
                 <tr>
                     <th>Company</th>
@@ -41,14 +41,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="job in work">
+                <tr *ngFor="let job of work">
                     <td>{{job.name}}</td>
                     <td>{{job.dates}}</td>
                     <td>{{job.position}}</td>
                 </tr>
             </tbody>
         </table>
-        <table id="education-table" class="table table-bordered" ng-show="show_education==true">
+        <table id="education-table" class="table table-bordered" *ngIf="show_education===true">
             <thead>
                 <tr>
                     <th>Institution</th>
@@ -58,7 +58,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="entry in education">
+                <tr *ngFor="let entry of education">
                     <td>{{entry.name}}</td>
                     <td>{{entry.dates}}</td>
                     <td>{{entry.location}}</td>
@@ -66,10 +66,10 @@
                 </tr>
             </tbody>
         </table>
-        <table id="skills-table" class="table table-bordered" ng-show="show_skills==true">
+        <table id="skills-table" class="table table-bordered" *ngIf="show_skills==true">
             <tbody>
-                <tr ng-repeat="row in skills">
-                    <td ng-repeat="skill in row">{{skill}}</td>
+                <tr *ngFor="let row of skills">
+                    <td *ngFor="let skill of row">{{skill}}</td>
                 </tr>
             </tbody>
         </table>
