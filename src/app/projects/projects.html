@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div id="projects-page" class="container-fluid">
+    <h1 id="projects-title">My Projects</h1>
+    <section id={{project.id}} class="project" *ngFor="let project of projects">
+        <div class="text-center">
+            <a [href]="project.link" class="title">{{project.title}}</a>
+            <button (click)="toggle(project.title)" *ngIf="project.show==false" class="click">+</button>
+            <button (click)="toggle(project.title)" *ngIf="project.show==true" class="click">-</button>
+        </div>
+        <p class="description" *ngIf="project.show==true">{{project.description}}</p>
+        <iframe class="iframe" [src]="project.link"></iframe>
+    </section>
+</div>
