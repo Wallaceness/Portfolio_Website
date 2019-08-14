@@ -1,5 +1,5 @@
 body{
-	background-image: url("Pictures/background-3.jpg");
+	background-image: url("assets/background-3.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -7,10 +7,6 @@ nav.navbar{
 	border-bottom: 1px solid black;
 }
 
-#projects-page{
-/*	margin-left: 6vw;
-	margin-right: 6vw;*/
-}
 #projects-title{
 	text-align: center;
 	font-size: 5vh;
@@ -40,14 +36,19 @@ nav.navbar{
 	padding: 1vw;
 	background-color: white;
 }
-.click{
+button.click{
 	font-size: 4vh;
 	width: 4vh;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	display: inline-block;
 	padding: 0px;
+	margin-left: 5px;
 	border-radius: 15px;
+}
+
+button.click:hover{
+	cursor: pointer;
 }
 
 
@@ -97,9 +98,7 @@ nav.navbar{
 #about_me-title{
 	font-size: 5vh;
 }
-.profile{
-/*	height: calc(50vh - 56px);*/
-}
+
 .no-margin{
 	margin: 0;
 }
@@ -148,10 +147,10 @@ nav.navbar{
 }
 
 
-@media (max-width: 700px){
+@media (max-width: 800px){
 	.profile{
 		text-align: center!important;
-		width: 65vh;
+		width: 100%;
 	}
 }
 
@@ -183,13 +182,6 @@ nav.navbar{
 	font-size: 3vh;
 }
 
-
-/*#navbar{
-	position: fixed;
-	top: 0px;
-	background-color: white;
-	margin-bottom: 0px;
-}*/
 .link{
 	background-color: white;
 	margin-left: 10vw;
@@ -202,4 +194,13 @@ nav.navbar{
 	#stuff{
 		width: 100vw;
 	}
+}
+
+
+.navbar a.nav-link{
+	color: #212529!important;
+}
+
+.navbar a.nav-link:hover{
+	color: #ececec!important;
 }
