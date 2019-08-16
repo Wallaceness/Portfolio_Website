@@ -16,5 +16,5 @@ app.listen(port, function() {
 
 app.get('*', function(request, response) {
     console.log(request.body);
-    response.sendFile(__dirname + '/browser/index.html');
+    response.sendFile(__dirname + '/dist/portfolio/index.html');
 })
