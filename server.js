@@ -7,7 +7,7 @@ var app = express();
 
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
-app.use("/", express.static(__dirname));
+app.use("/", express.static(__dirname+"/dist/portfolio"));
 
 var port = app.listen(process.env.PORT || 8080);
 app.listen(port, function() {
@@ -16,5 +16,5 @@ app.listen(port, function() {
 
 app.get('*', function(request, response) {
     console.log(request.body);
-    response.sendFile(__dirname + '/dist/portfolio/index.html');
+    response.sendFile('/index.html');
 })
